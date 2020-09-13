@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>How Many Frames in a Box?</title>
+		<style>
+			#input{
+				display:inline-block;
+				width:30%;
+			}
+			#output{
+				display:inline-block;
+				width:69%;
+				vertical-align:top;
+			}
+			td{
+				border: 1px solid black;
+			}
+			tr{
+				text-align:center;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="input">
+			<h3>Box Dimensions (inches)</h3>
+			<p>X-Dimension: </p><input type="number" id="boxX">
+			<br/>
+			<p>Y-Dimension: </p><input type="number" id="boxY">
+			<br/>
+			<p>Z-Dimension: </p><input type="number" id="boxZ">
+			
+			<br/><br/>
+			
+			<h3>Frame Scale:</h3>
+			<p>Enter Percentage: </p><input type="number" id="frame_scale" min="1" max="100" value="100">
+			
+			<br/>
+			<br/>
+			
+			<button id="submit">Calculate!</button>
+		</div>
+		<div id="output">
+			<table style="width:100%">
+				<tr style="font-weight:bold;">
+					<td>Orientations</td>
+					<td>X-1</td>
+					<td>X-2</td>
+					<td>Y-1</td>
+					<td>Y-2</td>
+					<td>Z-1</td>
+					<td>Z-2</td>
+				</tr>
+				<tr id="step_one">
+					<td>Step One</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr id="rem_space">
+					<td>Remaining Space</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr id="step_two">
+					<td>Step Two</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+			
+			<h3>Total Frames: <span id="total_frames"></span></h3>
+			<br/>
+			<h3>Packing Efficiency: <span id="packing_eff"></span></h3>
+		</div>
+	</body>
+	<script src="packing.js"></script>
+</html>
